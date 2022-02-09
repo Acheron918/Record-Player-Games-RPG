@@ -45,7 +45,7 @@ margin: 0 20px;
 /* Style the navbar */
 .topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: #353db8c5;
 }
 
 /* Navbar links */
@@ -56,12 +56,12 @@ margin: 0 20px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 /* Navbar links on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgba(204, 40, 40, 0.986);
   color: black;
 }
 

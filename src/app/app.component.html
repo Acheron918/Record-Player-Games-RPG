@@ -1,97 +1,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<section class="hero is-primary is-medium">
-  <!-- Hero head: will stick at the top -->
-
-    
-    <div class="topnav">
-      <a href="#home">
-        <img src="assets/img/logo.png" width="60" height="120">
-      </a>
-      <a class="active" href="#home">Home</a>
-      <a href="#Reviews">Reviews</a>
-      <a href="Rankings">Rankings</a>
-
-      <div class="login-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Username" name="username">
-          <input type="text" placeholder="Password" name="psw">
-          <button type="submit">Login</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="icon-bar">
-      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-      <a href="#" class="fa fa-reddit"></a>
-    </div>
-
-  <!-- Hero content: will be in the middle -->
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">
-        Gaming Reviews
-
-      </p>
-      <p class="subtitle">
-        Rankings
-      </p>
-    </div>
+<nav class="navbar">
+  <div class="container">
+  <div class="navbar-brand">
+    <a class="" href="">
+      <img src="assets/img/logo.png" alt="Logo"  width="80" height="200">
+    </a>
   </div>
-
-  <!-- Hero footer: will stick at the bottom -->
-  <div class ="banner">
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <img src="https://www.pexels.com/photo/blue-and-purple-cosmic-sky-956999/">
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>Gavin Smith</strong> <small>@@test</small> <small>31m</small>
-            <br>
-              Test This out and see what is going on with this.
-          </p>
-          <div class="footer-icons">
-            <a href="https://discord.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANMAAADuCAMAAACUPcKYAAAAkFBMVEX///9YZfJWY/JRX/JUYfJQXvL9/f9NW/FaZ/L09f75+f719v7GyvpLWvHm6P1davK1uvjv8P7d3/zP0/vU1/uorvfp6/1rdvOSmvZibvN7hfTY2/uYn/bg4vxIV/FxfPSIkfWutPi8wfmBi/WgpvdodPPDx/p1gPS4vfl8h/WaofbLz/uOlvWGj/apsPijqvj6AkVjAAALsElEQVR4nO2d65aqOgyAtS0gqCgXuYgMguLd8f3f7hR1xhvSpuoeOKvfv71nERuTpmmaSqslkUgkEolEIpFIJBKJRCKRSCQSyR9h6JalCj+tWpZuvHE0L2NYlhllo+kuFhYRT2eHRWR6tVDMsLx4sZmFfU0h/ZEuKEU/9AnW+p31oRd71l/qZVDzrAJf0TBpF6DcFpQUIXQUgLCGkkkWmX+il6p7cRb4WMPH0ZzQBA1lBfhXRqEX9ieL2NPFp6cA1EDb0axzo89xPKGYoVx0LwhrndnIMV+IOiAMz15MckUhd+MQN9S1mS5qEYX4k178eS9ULXuxC/G9gV4zlF329ZzMpeTBIv6otay4NwnPAaEcbdQFS9VHynOBVC1/szWtD2hDMUznkCglXsI2lHqh5K9m+MRMv2qhZO547/dBK1qNkVJlohPK2VCqbnmmGdt2FEVO74ITRbYdx6bpWd3TKI1MYwlF9JOnq+itxjLi7Wag3QenZ4byTJuqkR6C6SzJB6Tf72sX6L8GgySZTYPDMHMiO7bshP1NFSGj78+3bzOWHmdj5VlUeAAHu5mPNE3BmBCESr6I4j8JwVjRNJSPg6BiNt0+p6BpFommKtdY7veyMizcQwpVeIdJV1iAbERwkr6ulTcKOWbRvwNpfvrivOoOn60dfwYh2UuzSnX9OhnpBFpGr+hkTnkn8L9Embzgfd0h92z/lyAk7n219LwClAh7n7Wro+cVCHuf2qul5xUgtBDzPnNZT88rIGNTRCUj7f/1yCvAKXxTUwSIunpeARoIhAlrytgq/TECYULt1S4pukUgTJjj+gaIE+AwYQzb9TYTBQ9hhjLzupsJXPY1UmaNoAYoG0g8t/Pae14bGM+73DWCv0WZcBtKdbgrKn8Laju8JVp9X/8AcQLvOQsuqlPz5fYCIls+Q3UbY6Zi4eXKkBozm44oGY+hmmSmoojEYahmmYkaqsc2VHfWJDPRGbVmr1FuvbdNj2DmGmWUna3WGrxjpedmp1GziYI6jPTc+G5GpneNMqk2lMc4W60jDEM1Y990j/JdZSij1vWvZyC/KpN1mrU2/VCVIBmNSosuoOVz5zMbs8m4Q3kaJdSqJplag4NnhtIbUVkpA6FnUWLbVDO129qTKKFOmxkhCsisXCertseCbFC7NEqoaXNdr+hHKzOUWtNDdj5QXqaT3WQz0ShR5nzzZuuE5yU6NXZxOoHCx7pEw12v1PnmTatD3FPifA13veI06l4ls4kb3Fv6987X2JT8gjK604mrIbreIP9WJUvc9RBW+v2vfv/hlo2AlK++gsX3pf3b44CeoE4IY3+ycmzPdorLNoJqIaKFQSHFdFabJVIEtdKyG512Qq6HlDBwLN0oUi1V1S1n0hEYD8Jo+ivF0C17HoppRWY3OglVlAma2N3r1FHtxnOwJISm7o2UFpVCRL5j1LnewdsirXrYXzzumI0FsERIBkPjIaU2nLFIHL6J5isBCcrYLd2ymGuIUigpldKKA4G5qRyuJAico+GxWzYWijfm3zCT5NmdXksgWUPrKwHwXftzlY5K8Q7Cf35N2ZvAY7F2mVDw6USS7dPBtFoRZ1cZGgwrpNgzsKX6lwYk8HRC7WHlgeMw5FPpUCWktQAfHCnp78PgIhieMq62c8UJVh9AdwQdF7lMKGhPJcp71SpR72OLRGGV5x2lQBtYEfp51PyCPcnTMxx02GLWLClqCjXU14/ILTTAhCwztVoZc0axZlOBC72KoC3OT0JXAsLxQxHGkuV8yGf3HVsb4NB+N/Dcy8kZZcTRMHwYMKSiGVtIKwNOdZKcHwSuuOwIUbBlOB8apGwhYOdD5PQcNESQ5fMU4oLOyGVRztOgG0OXmXOQgIYIHHgco2kxJhTKeaTo0Ll+DhLQ8grecPU2zqp1+vX8aqCHLedCC/SwnStEsFconhBBsyywEx0fg/Z5KDyTm64Q1TterrBHAx9w33yuXIKzCFZKc2JUHcw7u4/o1P4qnrLAOvHZ6T2+txLKjiLo5olzPk3eM5+g2yDNEXkKH7ia72fVUj4U904zA1wpJzuuC2KManV1M9cP4ISPrjQtgfoKqShFXPBY4TSs2v3/EIO7uo7BHHxxEIUL5ljYG2++fG8Lbig8ngQMgA/RacgzGuamkC8vhxeIiwUKGsqp8+3ZF/l0ZrcFytm7MPh0Oi5Q4OWJb7OxzZlSQra5nQRejKULlEipXGFnsYxIflRqyWzgHwkcIX2ZQjohZkFiy1GaQ+HqA2YqFt2FyGkaDqqXKPUt9T0hM7W1HnyhPo6GUYdNWcWIk5ROUKlTT6iBn6ajYh1uJK9aMV3eenml90VjoTYUfGhNxPpX8Pp5OcHiPoEiFcmEKXhJmCZHYie5xWHNM6UswPkTWj6bmNZBsFmIbFp70aN7ZV2e9sUAlYqjz/JEK96JtiagPbgacQHnWcl5bgZsXCKD1eN2THWXwn01ZM8qWVU+jQL7djyGuUPglBgvo9tTasM8dMTbamgS+8pNGoRJ4FrGaUSG0XU3HRGPIWjqdM9SVKNrfgv2R5wHRXUSf7p9bKlJNpnrWV6UzX3xPhacT1aOqXtR77DUXtGI4rdevpiGsNb/+vp6vd9IO0l5tZkLha2mtyI+glp/PYIPIHVqBlKnZiB1agYtjt6MhtFpfv//PShviZRmas2LeXktQcn/z05kDT/WqDt0797gS7nlkGkr+N/pFDT/fto9eN4a/e90GsGP3dvFWxf+TbCknwTvfFdWrQzchx3ug/HgX2hFwnUwAx9+altwpxsK56YRjcZh+6NX/qmJwn1qG3EwAAaxvtuKYWefneT0KohoGCSdj2mFSDsJhsdSujcCVuu+zJalga7BhL8HT1bvsA7RB3yQTtdwf9j+VHi7B9DWgfTpg3PIT/ZSz7sqJ0fDyXLw3oBRKDQ+m+iIHrEal27AybFzebEGjWq8ii83y7tuGizfZi2q0GAZpNFFvhGnPkQ4mZ1Pmu0NpOROyDgzr2r2lkOtFYpE3RvQ0UKT1L06K1HNbAY5UyCDya+BjTSB1KjJYLe41qqlO8P5NOmQsrcI8VC8aKjj7+era4WoRosdKOiR8c0vZW8nkOEgTLWKb45pVLOXbvbJgAAVO742qZ3MJukivjuwoRpBSvBksLk75Ot+g0xFtdqv7g6fqPP3hvPdOm9jwuGKRZJA1cmX03nas+9O5/RoNQVpVBjp8QcknAkoOaAjWq/chwYH1YsW6SGYLfMQFW+1Or0MCv1wzqwIxnjgL2e7eZo55n1bguq59BsGxZ1HI51NtZrBbkeQtj/vxWU/+2nZzmKVjjbBdDxO/DwMO2fy3E+W4+luM/8e9hy77F1iXXsxSWAnNoTMVs86HO2DDztEQspgX9HdpVux624XWbYanllkva3jxmbF+1fdcQgcBE4OFfck9EUAXGuI/9LLmErYAhM8Eu56jB+0TGEOiA7vfh2it4G9vW28YrfnRgefPwKShKc3FobDX55DZHngGoDe23BPK5K+4916t1i8W2+E87nD+z4KOq344joZi74FuAqX7y2MONyVNJ08x6NxnUMrAnxtBx/dlKOhkaYyGfR9SfaQrRXm654HE7N63oU0KqBaVQd2xNX2LoBa3YItrFEh2l5VppFoznUJTwCvopL6ikZHzCzIlSfpKN8dBzGedvcSJQ9e0qjA7M390omFBh8JECe6aZn30fw3GW3fMYetbTpDjy6o8F3/FKTkDZbU6WbfjsBr1Eox7BV1wVtjEf9DAeKE2rvNJgoTBZn9Lo2OH2H2RjOCLzMLke/3ZxDX6KOr75CaaP3teG9/f7huZxO//eODnBe7XiD+eUkd3Vsmk/ea6ArPpWHw+INeJHE+8xFXbIvYd/rxLvf9Jrqgms5wl2Mcrj70tV1BY9/nFTphmO5wN/pkzPvBPAT/QqEThvlPPkn1zM+tgBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUjeyn+J/fuSdEFRiwAAAABJRU5ErkJggg==" style="width:50px" /></a>
-
-    </div>
-        </div>
-
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-reply"></i></span>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+        <a class="navbar-item">
+          Reviews
+        </a>
+        <a class="navbar-item">
+          Ranking
+        </a>        
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-dark">
+              <strong>Sign up</strong>
             </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-            </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-heart"></i></span>
+            <a class="button is-link">
+              Log in
             </a>
           </div>
-        </nav>
+        </div>
       </div>
-      <div class="media-right">
-        <button class="delete"></button>
-      </div>
-    </article>
+    </div>
   </div>
-  <div class="hero-foot">
-    <nav class="tabs">
-      <div class="container">
-        <ul>
-          <li class="is-active"><a>Overview</a></li>
-          <li><a>Reviews</a></li>
-          <li><a>Rankings</a></li>
-        </ul>
+</nav>
+<section class="hero is-danger is-large">
+    <div class="hero has-background">
+      <img alt="Video Game" class="hero-background is-transparent" src="assets/img/pic1.jpg" id="img-banner"/>
+      <div class="hero-body">
+        <div class="container has-text-centered" style="position: absolute; bottom: 20px; left: 35%; text-shadow: 2px 3px 5px rgba(92, 79, 79, 0.81);">
+          <div class="content is-medium">
+            <h1 class="title " id="title-banner" id="ttt">
+              Hero Image
+            </h1>
+            <h3 class="subtitle" id="des-banner">
+              without CSS background-image
+            </h3>
+          </div>
+        </div>
       </div>
-
-    </nav>
+    </div>
+</section>
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="0">
+      <div class="card img-hover" id="card_0">
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic1.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+    </a>
+    </div>
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="1">
+        <div class="card img-hover" id="card_1">
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic2.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+    </a>
+    </div>
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="2">
+        <div class="card img-hover" id="card_2" >
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic3.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="3">
+        <div class="card img-hover" id="card_3">
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic4.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="4">
+        <div class="card img-hover" id="card_4">
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic5.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="column">
+      <a onclick="loadImg(this.id);" id="5">
+        <div class="card img-hover" id="card_5">
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img src="assets/img/pic6.jpg" alt="Placeholder image" class="card-radius">
+          </figure>
+        </div>
+      </div>
+      </a>
+    </div>
   </div>
 </section>
-
-
+<section class="section is-large" style="background-color: darkgrey;">
+  <h1 class="title">Large section</h1>
+  <h2 class="subtitle">
+    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+  </h2>
+</section>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Record Player Games</strong>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+    <p>
+      <a class="icon is-large " href="https://github.com/Acheron918/Record-Player-Games-RPG.git">
+        <i class="fa fa-github fas fa-2x"></i>
+      </a>
+    </p>
+  </div>
+</footer>

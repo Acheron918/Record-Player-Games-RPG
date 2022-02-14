@@ -1,154 +1,29 @@
-*{
-  margin: 0;
-  padding:0;
-  font-family: sans-serif;
-
-}
-.banner{
-  width: 100%;
-  height: 10vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(https://www.pexels.com/photo/blue-and-purple-cosmic-sky-956999/);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-.navbar{
-  width: 85%;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar ul lo{
-list-style-type: none;
-display: inline-block;
-margin: 0 20px;
-}
-.field{
-  width:fit-content;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
-
-.hero-body{
-  height:80vh;
-}
-
-.footer-icons{
-  text-align: right;
-  padding: 3px;
-}
-/* Style the navbar */
-.topnav {
-  overflow: hidden;
-  background-color: #353db8c5;
-}
-
-/* Navbar links */
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 22px;
-}
-
-/* Navbar links on mouse-over */
-.topnav a:hover {
-  background-color: rgba(204, 40, 40, 0.986);
-  color: black;
-}
-
-/* Active/current link */
-.topnav a.active {
-  background-color: #2196F3;
-  color: white;
-}
-
-/* Style the input container */
-.topnav .login-container {
-  float: right;
-}
-
-/* Style the input field inside the navbar */
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
-}
-
-/* Style the button inside the input container */
-.topnav .login-container button {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .login-container button:hover {
-  background: #ccc;
-}
-
-/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 600px) {
-  .topnav .login-container {
-    float: none;
+  .hero.has-background {
+    position: relative;
+    overflow: hidden;
   }
-  .topnav a, .topnav input[type=text], .topnav .login-container button {
-    float: none;
-    display: block;
-    text-align: left;
+  .hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
     width: 100%;
-    margin: 0;
-    padding: 14px;
+    height: 100%;
   }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }}
-/* side icon bar */
-  .icon-bar {
-    position: fixed;
-    top: 30%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  .hero-background.is-transparent {
+    opacity: 0.9;
   }
-  
-  .icon-bar a {
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 20px;
+
+  .card-select{
+    border: 3px solid;
+    border-color: #407db2;
+    border-radius: calc(.5rem + 8px);
+    padding: 6px;
+  }
+  .card-radius{
+    border-radius: 0.5rem;
+  }
+
+  .img-hover:hover{
+  box-shadow: inset -1px 3px 8px 5px #0a70e6, 2px 5px 16px 0px #0d6ddb, 5px 5px 12px 11px rgba(44, 41, 71, 0.32);
   }
   
-  .icon-bar a:hover {
-    background-color: #000;
-  }
-  
-  .facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .youtube {
-    background: #bb0000;
-    color: white;
-  }
-  .fa-reddit {
-    background: #ff5700;
-    color: white;
-  }

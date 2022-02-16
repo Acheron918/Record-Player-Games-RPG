@@ -24,18 +24,24 @@ function controlImg(image, title, description, alt)
 
 // Create global variable to change content
     var fade = true;
-    var index = 0;
 
 // Execute the following code after the webpage has been loaded.
     window.onload = function()
     {
-       showImg(index);
+        var iteration = 0;
+
+        setTimeout(function () {
+
+            showImg(iteration);
+            iteration = iteration + 1;
+        }, 1000);
+        
     };
 
 // Change the content of the object
     function loadImg(index)
     {
-        showImg(index);
+        showImg(parseInt(index));
     }
 
 // Show the content of the object
@@ -47,7 +53,6 @@ function controlImg(image, title, description, alt)
             
         document.getElementById("title-banner").innerHTML = imgs[index].title;
         document.getElementById("des-banner").innerHTML = imgs[index].description;
-
 
         for (var i = 0; i < imgs.length; i++) {
             document.getElementById("card_"+i).classList.remove('card-select');

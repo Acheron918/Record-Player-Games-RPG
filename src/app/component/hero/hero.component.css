@@ -1,0 +1,29 @@
+.hero.has-background {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-background.is-transparent {
+    opacity: 0.9;
+  }
+
+  .card-select{
+    border: 3px solid;
+    border-color: #407db2;
+    border-radius: calc(.5rem + 8px);
+    padding: 6px;
+  }
+  .card-radius{
+    border-radius: 0.5rem;
+  }
+
+  .img-hover:hover{
+  box-shadow: inset -1px 3px 8px 5px #0a70e6, 2px 5px 16px 0px #0d6ddb, 5px 5px 12px 11px rgba(44, 41, 71, 0.32);
+  }
+  

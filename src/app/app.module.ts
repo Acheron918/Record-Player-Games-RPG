@@ -10,6 +10,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeroComponent } from './component/hero/hero.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { PostComponent } from './component/post/post.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PostComponent } from './component/post/post.component';
     FooterComponent,
     HeroComponent,
     RankingComponent,
-    PostComponent
+    PostComponent,
+    PostsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

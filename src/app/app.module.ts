@@ -11,6 +11,7 @@ import { HeroComponent } from './component/hero/hero.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { PostComponent } from './component/post/post.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PostsComponent } from './pages/posts/posts.component';
     HeroComponent,
     RankingComponent,
     PostComponent,
-    PostsComponent
+    PostsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

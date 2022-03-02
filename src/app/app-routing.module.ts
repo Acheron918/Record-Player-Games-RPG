@@ -5,7 +5,7 @@ import { LfgComponent } from './pages/lfg/lfg.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
-
+import {LoginComponent} from './component/login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'reviews', component: ReviewsComponent},
   {path: 'ranking', component: RankingComponent},
   {path: 'lfg', component: LfgComponent},
+  {path: 'login', component: LoginComponent}
 
 ];
 

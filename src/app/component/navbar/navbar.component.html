@@ -19,11 +19,11 @@
             Reviews
           </a>
           <a class="navbar-item" routerLink="/ranking">
-            Ranking 
+            Ranking
           </a>
           <a class="navbar-item" routerLink="/lfg">
-            LFG 
-          </a>       
+            LFG
+          </a>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
@@ -31,7 +31,7 @@
               <a class="button is-dark">
                 <strong>Sign up</strong>
               </a>
-              <a class="button is-link">
+              <a button (click)="goToComponent('login')" class="button is-link">
                 Log in
               </a>
             </div>

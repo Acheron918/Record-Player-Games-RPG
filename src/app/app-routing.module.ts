@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { LfgComponent } from './pages/LFG/lfg.component';
+import { LfgComponent } from './pages/lfg/lfg.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-fullstack-a5dc7": {
+      "hosting": {
+        "Record-Player-Games": [
+          "angular-fullstack-a5dc7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-fullstack-a5dc7"
+  }
+}

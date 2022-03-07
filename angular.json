@@ -99,6 +99,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Record-Player-Games:build:production",
+            "firebaseProject": "angular-fullstack-a5dc7",
+            "firebaseHostingSite": "angular-fullstack-a5dc7"
+          }
         }
       }
     }

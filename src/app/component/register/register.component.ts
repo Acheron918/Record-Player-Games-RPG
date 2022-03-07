@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
-
+export class RegisterComponent implements OnInit {
+  
   email : string = '';
   password : string = '';
 
@@ -15,9 +15,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-    
-  login() {
+  
+  register() {
 
     if(this.email == '') {
       alert('Please enter email');
@@ -29,7 +28,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.auth.login(this.email,this.password);
+    this.auth.register(this.email,this.password);
     
     this.email = '';
     this.password = '';

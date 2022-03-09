@@ -1,0 +1,14 @@
+mat-card{
+ margin-top: 32px;
+ margin-left: 200px;
+ width: 50%;
+}
+
+textarea{
+  width: 100%;
+}
+
+button{
+  width: 20%;
+  margin-left: 40%;
+}

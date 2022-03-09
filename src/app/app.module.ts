@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +20,7 @@ import { LoginComponent } from './component/login/login.component';
 import { GroupComponent } from './component/group/group.component';
 import { LfgComponent } from './pages/lfg/lfg.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +34,15 @@ import { LfgComponent } from './pages/lfg/lfg.component';
     PostsComponent,
     LoginComponent,
     GroupComponent,
-    LfgComponent
-  ],
+    LfgComponent,
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

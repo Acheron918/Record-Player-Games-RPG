@@ -5,7 +5,7 @@ var imgs =
    new controlImg("pic1.jpg","Enjoy the moment","Contemplate the best video games"),
    new controlImg("pic2.jpg","Classic Pokemon","Remember the best games of Pokemon"),
    new controlImg("pic3.jpg","Ranking Arcade","Visit the nearest arcade to you"),
-   new controlImg("pic4.jpg","Wii U","Check the best nintendo games"),
+   new controlImg("pic4.jpg","Nintendo Switch","Check the best nintendo games"),
    new controlImg("pic5.jpg","Refreshing","Buy new soda products"),
    new controlImg("pic6.jpg","Come back","Play the classic games")
  ];   

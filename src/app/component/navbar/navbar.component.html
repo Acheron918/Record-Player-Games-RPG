@@ -22,13 +22,13 @@
             Ranking
           </a>
           <a class="navbar-item" routerLink="/lfg">
-            LFG
+            Looking for Group
           </a>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-dark">
+            <div class="buttons" *ngIf="user == null; else loggedOut">
+              <a class="button is-dark" button (click)="goToComponent('register')">
                 <strong>Sign up</strong>
               </a>
               <a button (click)="goToComponent('login')" class="button is-link">
@@ -36,6 +36,24 @@
               </a>
             </div>
           </div>
+          <ng-template #loggedOut>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  <span class="icon"><i class="fa fa-home"></i></span>
+                  <span>{{ user | titlecase }}</span>
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    <span class="icon"><i class="fa fa-gear"></i></span>
+                    <span>Account</span>
+                  </a>
+                  <a class="navbar-item" (click)="onLogout()">
+                    <span class="icon"><i class="fa fa-sign-out"></i></span>
+                    <span>Log out</span>
+                  </a>
+                </div>
+              </div>
+          </ng-template>
         </div>
       </div>
     </div>

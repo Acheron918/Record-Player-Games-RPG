@@ -1,0 +1,58 @@
+<section class="section">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-narrow">
+            <form  class="box"  [formGroup]="registerForm"  #form="ngForm" (ngSubmit)="onRegister(form)">
+                <div class="mt-2">
+                    <h4 class="title is-4 has-text-centered has-text-weight-bold">Sign Up</h4>
+                </div>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control has-icons-left form-group">
+                        <input class="input" type="text" placeholder="Name" formControlName="name" [ngClass]="{'is-danger': name?.errors && (name?.touched || name?.dirty), '': name?.valid}">
+                        <span class="icon is-left is-small has-text-info">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger" *ngIf="name?.errors?.['required'] && (name?.touched || name?.dirty)">This field is required</p>
+                    <p class="help is-danger" *ngIf="name?.errors?.['minlength']">Name must be greated than 2 character</p>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left form-group">
+                        <input class="input" type="email" placeholder="example@gmail.com"  formControlName="email" [ngClass]="{'is-danger': email?.errors && (email?.touched || email?.dirty), '': email?.valid}">
+                        <span class="icon is-left is-small has-text-info">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger" *ngIf="email?.errors?.['required'] && (email?.touched || email?.dirty)">This field is required</p>
+                    <p class="help is-danger" *ngIf="email?.errors?.['email']">Please, enter valid email address.</p>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password" formControlName="password"  [ngClass]="{'is-danger': (password?.errors || registerForm?.errors?.['passwordsDontMatch']) && (password?.touched || password?.dirty), '': password?.valid}">
+                        <span class="icon is-left is-small has-text-info">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger" *ngIf="password?.errors?.['required'] && (password?.touched || password?.dirty)">This field is required</p>
+                    <p class="help is-danger" *ngIf="password?.errors?.['minlength']">Password must be greated than 5 character</p>
+                </div>
+                <div class="field">
+                    <label class="label">Confirm Password</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Confirm Password" formControlName="confirmPassword"  [ngClass]="{'is-danger': (confirmPassword?.errors || registerForm?.errors?.['passwordsDontMatch']) && (confirmPassword?.touched || confirmPassword?.dirty), '': confirmPassword?.valid}">
+                        <span class="icon is-left is-small has-text-info">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger" *ngIf="confirmPassword?.errors?.['required'] && (confirmPassword?.touched || confirmPassword?.dirty)">This field is required</p>
+                </div>
+                <p class="help is-danger" *ngIf="registerForm?.errors?.['passwordsDontMatch']">Passwords should match</p>
+                <div class="has-text-centered">
+                    <button type="submit" class="button is-link mt-2" [disabled]="registerForm.invalid">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

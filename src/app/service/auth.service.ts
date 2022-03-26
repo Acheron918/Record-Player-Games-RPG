@@ -2,6 +2,7 @@ import {AngularFireAuth} from '@angular/fire/compat/auth';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,6 @@ export class AuthService {
     this.fireauth.signInWithEmailAndPassword(email,password).then( res => {
 
         this.toust.success('Logged in successfully');
-        localStorage.setItem('user', res.user?.displayName!);
         this.router.navigate(['/home']);
 
     }, err => {
@@ -24,6 +24,7 @@ export class AuthService {
       this.router.navigate(['/login']);
 
     })
+    
   }
 
   // register method
@@ -33,12 +34,13 @@ export class AuthService {
         res.user?.updateProfile({displayName: name,} ).then(() => {
           // Profile updated!
           this.toust.success('Registration Successful');
+          this.router.navigate(['/home/']);
+
         }).catch((error) => {
           // An error occurred
           this.toust.error(error.message);
         });
 
-      //this.router.navigate(['/login']);
     }, err => {
 
       this.toust.error(err.message);
@@ -52,7 +54,6 @@ export class AuthService {
 
     this.fireauth.signOut().then( () => {
       this.toust.info('Successful logout');
-      localStorage.removeItem('user');
       this.router.navigate(['/home']);
 
     }, err => {

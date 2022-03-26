@@ -42,15 +42,13 @@ export class RegisterComponent implements OnInit {
   }
 
   //Sign up method
-  async onRegister(form: any) {
+  async onRegister() {
 
     if(this.registerForm.invalid) return;
 
     const {name, email, password} = this.registerForm.value;
 
     this.auth.register(name,email,password);
-
-    setInterval(() => {form.reset();},1500)
   }
 }
 

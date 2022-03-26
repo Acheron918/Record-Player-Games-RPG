@@ -26,21 +26,11 @@
           </a>
         </div>
         <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons" *ngIf="user == null; else loggedOut">
-              <a class="button is-dark" button (click)="goToComponent('register')">
-                <strong>Sign up</strong>
-              </a>
-              <a button (click)="goToComponent('login')" class="button is-link">
-                Log in
-              </a>
-            </div>
-          </div>
-          <ng-template #loggedOut>
-              <div class="navbar-item has-dropdown is-hoverable">
+
+              <div class="navbar-item has-dropdown is-hoverable" *ngIf="authF.user | async as user; else loggedOut">
                 <a class="navbar-link">
                   <span class="icon"><i class="fa fa-home"></i></span>
-                  <span>{{ user | titlecase }}</span>
+                  <span>{{ user.displayName | titlecase }}</span>
                 </a>
                 <div class="navbar-dropdown">
                   <a class="navbar-item">
@@ -53,6 +43,20 @@
                   </a>
                 </div>
               </div>
+
+          <ng-template #loggedOut>
+
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-dark" button (click)="goToComponent('register')">
+                  <strong>Sign up</strong>
+                </a>
+                <a button (click)="goToComponent('login')" class="button is-link">
+                  Log in
+                </a>
+              </div>
+            </div>
+         
           </ng-template>
         </div>
       </div>

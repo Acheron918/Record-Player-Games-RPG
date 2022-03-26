@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
 import { AuthService } from 'src/app/service/auth.service';
 import {Router} from '@angular/router';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -9,20 +11,16 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router, private auth : AuthService) { }
+  constructor(private router:Router, public authF : AngularFireAuth, private authS : AuthService) { }
+
   goToComponent(ComponentName:string):void{
     this.router.navigate([`${ComponentName}`]);
   }
 
   ngOnInit(): void {
-  }
-
-  get user(){
-    return localStorage.getItem('user');
-  }
+    }
 
   onLogout(){
-    this.auth.logout();
+    this.authS.logout();
   }
-
 }

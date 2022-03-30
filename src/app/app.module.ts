@@ -13,10 +13,15 @@ import { HeroComponent } from './component/hero/hero.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { PostComponent } from './component/post/post.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import {PostsCreateComponent} from './pages/posts/post-create/post-create.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { GroupComponent } from './component/group/group.component';
 import { LfgComponent } from './pages/LFG/lfg.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -35,6 +40,7 @@ import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
     RankingComponent,
     PostComponent,
     PostsComponent,
+    PostsCreateComponent,
     LoginComponent,
     GroupComponent,
     LfgComponent,
@@ -49,6 +55,9 @@ import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
     AngularFireModule.initializeApp(environment.firebase),
     FontAwesomeModule,
     HotToastModule.forRoot(),
+    MatDialogModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]

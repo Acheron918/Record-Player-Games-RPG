@@ -23,6 +23,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
     AngularFireModule.initializeApp(environment.firebase),
     FontAwesomeModule,
     HotToastModule.forRoot(),
-  ],
+    AngularFirestoreModule
+    ],
   providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })

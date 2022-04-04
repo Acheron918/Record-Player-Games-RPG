@@ -10,11 +10,13 @@ import { FormGroup } from '@angular/forms';
 export class AuthService {
 
   constructor(private fireauth : AngularFireAuth, private router : Router, private toust: HotToastService) { }
+  userN = "";
 
   // login method
   login(email : string, password : string) {
     this.fireauth.signInWithEmailAndPassword(email,password).then( res => {
 
+        this.user(res.user?.displayName!);
         this.toust.success('Logged in successfully');
         this.router.navigate(['/home']);
 
@@ -61,6 +63,14 @@ export class AuthService {
       this.toust.error(err.message);
 
     })
+  }
+
+  currentUser(){
+    return this.userN
+  }
+
+  user(user:string){
+    this.userN = user;
   }
 
 }

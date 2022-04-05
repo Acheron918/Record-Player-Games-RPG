@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { GameRankingComponent } from './component/game-ranking/game-ranking.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     GroupComponent,
     LfgComponent,
     RegisterComponent,
+    GameRankingComponent,
     ],
   imports: [
     BrowserModule,

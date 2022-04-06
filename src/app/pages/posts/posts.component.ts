@@ -7,7 +7,7 @@ import { FirebaseTSStorage } from 'firebasets/firebasetsStorage/firebaseTSStorag
 import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Timestamp } from 'rxjs';
-
+ 
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',

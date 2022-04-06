@@ -63,4 +63,4 @@ export class AppModule {
   constructor(){
     FirebaseTSApp.init(environment.firebase);
   }
- }
+ } 

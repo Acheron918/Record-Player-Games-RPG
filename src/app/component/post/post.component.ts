@@ -7,12 +7,11 @@ import { PostData } from 'src/app/pages/posts/posts.component';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  
+   
   @Input() postData : PostData | undefined;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
 }

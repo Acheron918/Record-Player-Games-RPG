@@ -25,6 +25,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { GameRankingComponent } from './component/game-ranking/game-ranking.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { GameRankingComponent } from './component/game-ranking/game-ranking.comp
     LfgComponent,
     RegisterComponent,
     GameRankingComponent,
+    ProfileSettingsComponent,
     ],
   imports: [
     BrowserModule,

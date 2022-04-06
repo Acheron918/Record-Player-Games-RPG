@@ -27,6 +27,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
 import { GameRankingComponent } from './component/game-ranking/game-ranking.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { GameRankingComponent } from './component/game-ranking/game-ranking.comp
     LfgComponent,
     RegisterComponent,
     GameRankingComponent,
+    ProfileSettingsComponent,
     ],
   imports: [
     BrowserModule,

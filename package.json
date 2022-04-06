@@ -30,6 +30,7 @@
     "angular-material": "^1.2.4",
     "bulma": "^0.9.3",
     "firebase": "^9.4.0",
+    "firebasets": "^1.2.13",
     "rxfire": "^6.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

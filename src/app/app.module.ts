@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
 
 @NgModule({
   declarations: [
@@ -55,4 +56,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
   providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    FirebaseTSApp.init(environment.firebase);
+  }
+ }

@@ -17,7 +17,7 @@
 <section class="section is-medium" style="background-color: rgb(229, 229, 229);">
 
   <!-- Posts' content  -->
-
+  <app-each-post *ngFor="let post of posts" [postData]="post"></app-each-post>
 
   <!-- Modal -->
   <div class="modal" id="postModal">
@@ -31,6 +31,7 @@
       </header>
       <section class="modal-card-body" style="scrollbar-width: none;">
           <!-- Body Section -->
+          <input class="input mb-4 is-medium" type="text" placeholder="Title Post" [(ngModel)]="titlePost">
           <div>  
             <textarea #commentInput class="textarea is-focused" placeholder="Type message" [(ngModel)]="commentPost"></textarea>
           </div>
@@ -57,10 +58,7 @@
             </div>
           </div>
           <div class="column">
-              <button class="button is-info" id="postButton" (click)="onPostClick()">Post</button>
-          </div>
-          <div *ngIf="authF.user | async as user">
-                <p>{{ user.displayName | titlecase }}</p>
+              <button class="button is-info" id="postButton" (click)="uploadImagePost()">Post</button>
           </div>
         </div>
       </footer>
